@@ -1,0 +1,20 @@
+.btn-shape {
+    padding: 15px 40px;
+    display: block;
+    width: fit-content;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: $white;
+    &.pink {
+        background-color: $pink;
+    }
+    &.blue {
+        background-color: $link-bg;
+    }
+    &.orange {
+        background-color: $orange;
+    }
+}

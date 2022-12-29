@@ -1,0 +1,158 @@
+/* start header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1111;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    height: 80px;
+    .logo {
+        a {
+            font-size: 40px;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: $title-color;
+        }
+    }
+    @media (min-width: 922px) {
+        nav {
+            display: block !important;
+            & > ul {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                li {
+                    position: relative;
+                    ul {
+                        display: none;
+                        position: absolute;
+                        top: calc(100% + 10px);
+                        padding: 30px 20px;
+                        border: 1px solid $link-bg;
+                        width: 200px;
+                        background-color: $white;
+                        border-radius: 4px;
+                        opacity: 0;
+                        transition: .4s;
+                        li {
+                            margin-bottom: 20px;
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+                        }
+                        &::before {
+                            content: "";
+                            width: 10px;
+                            height: 10px;
+                            background-color: $white;
+                            border-left: 1px solid $link-bg;
+                            border-top: 1px solid $link-bg;
+                            position: absolute;
+                            top: -7px;
+                            left: 30px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    &:hover {
+                        ul {
+                            display: block;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .btns {
+            display: flex !important;
+        }
+        .close {
+            display: none !important;
+        }
+        .open {
+            display: none !important;
+        }
+    }
+    @media (max-width: 921px) {
+        nav {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            padding: 30px;
+            background-color: $white;
+            box-shadow: 0 0 5px $text-color;
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                    ul {
+                        display: none;
+                        margin: 5px 0;
+                        padding: 20px;
+                        box-shadow: 0 0 4px $text-color;
+                    }
+                }
+            }
+        }
+    }
+    nav {
+        display: none;
+        ul {
+            li {
+                transition: .3s;
+                cursor: pointer;
+                a,&.down {
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    color: $text-color;
+                    font-weight: 500;
+                    &:hover {
+                        color: $link-bg;
+                    }
+                }
+            }
+        }
+    }
+    .btns {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        .sign-in {
+            color: $text-color;
+            &:hover {
+                color: $link-bg;
+            }
+        }
+        .sign-up {
+            background-color: $link-bg;
+            color: $white;
+            &:hover {
+                background-color: #6881FF;
+            }
+        }
+    }
+    .close {
+        display: none;
+        cursor: pointer;
+        i {
+            font-size: 30px;
+            color: $text-color;
+        }
+    }
+    .open {
+        cursor: pointer;
+        i {
+            font-size: 30px;
+            color: $text-color;
+        }
+    }
+}
+/* end header */

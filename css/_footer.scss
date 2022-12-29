@@ -1,0 +1,128 @@
+footer {
+    padding: 50px 0;
+    background-color: $white;
+    .container {
+        .links {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding-bottom: 30px;
+            border-bottom: 1px solid $second-bg;
+            .logo {
+                a {
+                    display: block;
+                    font-size: 40px;
+                    text-transform: capitalize;
+                    color: $title-color;
+                    margin-bottom: 30px;
+                }
+                p {
+                    max-width: 350px;
+                    margin-bottom: 10px;
+                }
+                .media {
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+                    a {
+                        i {
+                            font-size: 20px;
+                            color: $text-color;
+                            transition: .3s;
+                            &:hover {
+                                color: $link-bg;
+                            }
+                        }
+                    }
+                }
+            }
+            .useful-link {
+                h3 {
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    color: $title-color;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+                ul {
+                    li {
+                        margin-bottom: 20px;
+                        a {
+                            display: block;
+                            font-size: 16px;
+                            text-transform: capitalize;
+                            color: $text-color;
+                            font-size: 500;
+                            &:hover {
+                                color: $link-bg;
+                            }
+                        }
+                    }
+                }
+                p {
+                    max-width: 350px;
+                    margin-bottom: 20px;
+                }
+                form {
+                    position: relative;
+                    input {
+                        display: block;
+                        width: 100%;
+                        padding: 15px 20px;
+                        border: 1px solid $text-color;
+                        border-radius: 30px;
+                        font-size: 16px;
+                        color: $text-color;
+                        &::placeholder {
+                            font-size: 16px;
+                            text-transform: capitalize;
+                            font-weight: 600;
+                            color: $text-color;
+                            opacity: .5;
+                            transition: .3s;
+                        }
+                        &:focus {
+                            border-color: $link-bg;
+                            &::placeholder {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    button {
+                        background: none;
+                        border: none;
+                        outline: none;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 20px;
+                        cursor: pointer;
+                        i {
+                            color: $text-color;
+                            font-size: 20px;
+                            &:hover {
+                                color: $link-bg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .copy-right {
+            padding: 30px 0 0 0;
+            p {
+                text-align: center;
+                a {
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    color: $title-color;
+                    font-weight: 600;
+                    &:hover {
+                        color: $link-bg;
+                    }
+                }
+            }
+        }
+    }
+}
